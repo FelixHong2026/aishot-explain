@@ -1,0 +1,30 @@
+{
+  "_说明": "这是配置模板。复制成 config.json 后修改（config.json 不进版本库）。",
+
+  "hotkey": "F9",
+
+  "_provider说明": "zhipu = 智谱GLM | openai = 任意OpenAI兼容视觉模型",
+  "provider": "zhipu",
+  "base_url": "https://open.bigmodel.cn/api/paas/v4",
+
+  "_model说明": "glm-4v-flash(约5秒/免费/推荐) | glm-4v-plus(约4.5秒/收费) | glm-4v(约4.6秒) | glm-4.5v(约18秒/最聪明但慢)",
+  "model": "glm-4v-flash",
+
+  "_stream说明": "true = 流式输出，首字约0.4秒",
+  "stream": true,
+
+  "_key说明": "留空则自动读环境变量 ZHIPU_API_KEY / ZAI_API_KEY（openai 模式读 OPENAI_API_KEY）",
+  "api_key": "",
+
+  "prompt": "请解释这张图片里的内容，用 Markdown 格式回答：\n- 如果有外文，先用 **加粗** 标出原文，再给中文翻译\n- 用小标题分别解释每段文字的含义、背景知识或专业术语\n- 语言简洁，直接说要点，不要客套话",
+
+  "_max_tokens说明": "glm-4v-flash 上限 1024（超了报 HTTP 400 code 1210）；换 glm-4.5v 可调到 2000",
+  "max_tokens": 1024,
+  "temperature": 0.3,
+  "timeout": 180,
+
+  "show_image_thumb": true,
+  "_thumb说明": "缩略图宽高都要限 —— 不限高度的话长截图会把底部输入框挤出窗口",
+  "thumb_max_width": 300,
+  "thumb_max_height": 140
+}

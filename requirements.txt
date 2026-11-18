@@ -1,0 +1,3 @@
+# AIShotExplain 运行时依赖
+# 只用到 Pillow 做截图和缩放；tkinter 随 Python 自带，热键用 ctypes
+pillow>=10.0
